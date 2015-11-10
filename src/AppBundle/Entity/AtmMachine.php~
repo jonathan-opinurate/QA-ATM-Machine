@@ -1,0 +1,53 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: jonathan
+ * Date: 05/11/15
+ * Time: 13:31
+ */
+
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user_accounts")
+ */
+class AtmMachine
+{
+    /**
+     * @ORM\Column(type="integer", name="id")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=50, name="name")
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="integer", name="account_number")
+     */
+    protected $acc_no;
+
+    /**
+     * @ORM\Column(type="integer", name="pin_number")
+     */
+    protected $pin_no;
+
+    /**
+     * @ORM\Column(type="integer", name="balance")
+     */
+    protected $balance;
+
+    /**
+     * @ORM\Column(type="integer", name="withdrawn")
+     */
+    protected $cashOut;
+
+    protected $newBalance;
+}

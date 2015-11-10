@@ -1,0 +1,12 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+hello: # The route name
+    path:     /hello/{name}
+    defaults: { _controller: AppBundle:Hello:index }
+
+login:
+    path: /login
+    defaults: { _controller: AppBundle:Atm:home}
+logout:
+    path: /logout

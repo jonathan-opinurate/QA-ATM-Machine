@@ -1,0 +1,34 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    encoders:
+            AppBundle\Entity\AccountHolder:
+                algorithm: plaintext
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory:
+            memory: ~
+
+        symfony_db:
+            entity:
+                class: AppBundle:AccountHolder
+                property: acc_no
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login_firewall:
+                pattern:   ^/login$
+                anonymous: ~
+        secured_area:
+                pattern:    ^/
+                form_login: ~
+                provider: symfony_db
+                logout:
+                  path:   /logout
+                  target: /
