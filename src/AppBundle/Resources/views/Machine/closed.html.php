@@ -8,4 +8,6 @@
 $view->extend('::layout.html.php');
 ?>
 
+
+
 <h1>The ATM Machine is Now Closed</h1>

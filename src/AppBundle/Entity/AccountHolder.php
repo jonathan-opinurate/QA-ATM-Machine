@@ -250,9 +250,11 @@ class AccountHolder implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        return [
-          'ROLE_USER'
-        ];
+        if ($this->acc_no === 999999 && $this->pin_no === 1234) {
+            return ['ROLE_USER', 'ROLE_MANAGER'];
+        } else {
+            return ['ROLE_USER'];
+}
     }
 
     /**
