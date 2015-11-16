@@ -16,14 +16,17 @@ Once you have successfully logged in you should be redirected to the options pag
 User Accounts:
 
 Kimberly Williams|
+
 Acc/No: 100003
 PIN:    1003
 
 Paula Winwood|
+
 Acc/No: 100001
 PIN:    1002
 
 Jonathan Y Ben Avraham|
+
 Acc/No: 100004
 PIN:    1006
 
