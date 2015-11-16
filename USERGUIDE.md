@@ -30,6 +30,8 @@ Withdraw Cash
 Withdrawing cash is easy, you have multiple options given as Radio Button options. You can select up in £10 increments until £50 where the amounts then go up in £50 increments.
 e.g. The page should look like this:
 
+=======================================
+
 ---------------------------------
 |      WITHDRAW CASH            |
 |          £10                  |
@@ -46,6 +48,4 @@ e.g. The page should look like this:
 |                 |submit|      |
 ---------------------------------
 
-=======
-# QA-ATM-Machine
->>>>>>> f19830257ee45cc35a6bf96dddac43e038d7f049
+============================================
