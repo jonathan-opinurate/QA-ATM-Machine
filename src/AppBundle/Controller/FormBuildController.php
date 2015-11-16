@@ -19,7 +19,7 @@ class FormBuildController extends Controller
     /**
      * @Route("/cash-out/{receipt}", name="cash_out")
      */
-    public function withdrawlFormAction(Request $request, $receipt)
+    public function withdrawalFormAction(Request $request, $receipt)
     {
         $form = $this->createFormBuilder()
             ->add('amount', 'choice', [
