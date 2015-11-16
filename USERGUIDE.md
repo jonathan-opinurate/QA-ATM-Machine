@@ -1,4 +1,4 @@
-atm_machine
+ATM Program
 ===========
 
 Login
