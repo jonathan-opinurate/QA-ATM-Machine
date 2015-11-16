@@ -13,6 +13,19 @@ On the login page you will see two input fields, one prompts you for an Account 
 Should you fail to enter the correct details, you will be redirected to the login page twice and on the third incorrect entry, your card will be taken and the machine will be locked.
 Once you have successfully logged in you should be redirected to the options page.
 
+User Accounts:
+
+Kimberly Williams|
+Acc/No: 100003
+PIN:    1003
+
+Paula Winwood|
+Acc/No: 100001
+PIN:    1002
+
+Jonathan Y Ben Avraham|
+Acc/No: 100004
+PIN:    1006
 
 Options
 =========
