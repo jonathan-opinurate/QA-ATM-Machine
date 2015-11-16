@@ -27,7 +27,7 @@ Once on the options page you should see multiple options, the following options 
 
 4) Deposit Cash
 
-on clicking any of the four options you will be redirected to the respective page.
+Upon clicking any of the four options you will be redirected to the respective page.
 
 Withdraw Cash
 =============
