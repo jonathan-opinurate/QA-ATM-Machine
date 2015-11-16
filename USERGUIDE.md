@@ -20,8 +20,11 @@ Options
 Once on the options page you should see multiple options, the following options will become availabe:
 
 1) Withdraw Cash
+
 2) Cash With Receipt
+
 3) Display Balance
+
 4) Deposit Cash
 
 on clicking any of the four options you will be redirected to the respective page.
