@@ -4,7 +4,7 @@ atm_machine
 Login
 =======
 
-#Login Screen
+Login Screen:
 When you locate to the home page, you will be automatically redirected to the login page.
 
 On the login page you will see two input fields, one prompts you for an Account Number and the other for a PIN (Personal Identification Number).
