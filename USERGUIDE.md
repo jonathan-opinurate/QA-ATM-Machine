@@ -50,8 +50,8 @@ This option allows you to put money back into your account.
 
 Logout
 ===============
-To Logout, simply direct yourself back to the options page and you will find a logout button there. 
-Upon logging out your PHP session is ended and all changes are made to the database.
+To Logout, simply direct yourself back to the options page and you will find a logout button there.
+Upon logging out you will be redirected to the login page.
 
 =============================================================================================================
 
