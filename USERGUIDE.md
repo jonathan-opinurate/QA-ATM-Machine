@@ -30,7 +30,7 @@ Withdraw Cash
 Withdrawing cash is easy, you have multiple options given as Radio Button options. You can select up in £10 increments until £50 where the amounts then go up in £50 increments.
 e.g. The page should look like this:
 
-________________________________
+---------------------------------
 |      WITHDRAW CASH            |
 |          £10                  |
 |          £20                  |
