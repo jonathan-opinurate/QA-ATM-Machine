@@ -1,4 +1,6 @@
-atm_machine
+#QA-ATM-Machine
+
+For assessment EDP2 and SDF
 ===========
 
 ATM Project created by Jonathan Y Ben Avraham for the purpose of QA paper EDP2 a SDF.
@@ -8,5 +10,3 @@ database host, user, password and name will be provided upon enquiry by a QA App
 are for my personal database on my personal web server.
 
 =======
-# QA-ATM-Machine
->>>>>>> f19830257ee45cc35a6bf96dddac43e038d7f049
