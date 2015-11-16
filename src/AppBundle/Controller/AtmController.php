@@ -21,7 +21,7 @@ class AtmController extends Controller
     public function loginPageAction()
     {
         if (!isset ($acc_no)){
-            return $this->render('AppBundle:Machine:login.html.php');
+           return new Response( $this->render('AppBundle:Machine:login.html.php'));
         }
     }
 }

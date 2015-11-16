@@ -1,0 +1,123 @@
+/**
+*   created by: Jonathan
+*   created on: 5th November 2015
+*   creatd at: 16:07
+*/
+
+h1{
+    text-align:center;
+    background:linear-gradient(#75DB53,#45C21B);
+    padding:7px 12px;
+    color:black!important;
+    width:50%!important;
+    margin:0 auto!important;
+}
+h3{
+    padding-top:10px;
+}
+
+.atm-body{
+    width:50%;
+    margin:10% auto;
+    height:700px;
+    background-color:#3354B0;
+    color:#fff;
+    text-align: center;
+    border-radius:12px;
+    border: 12px solid gray;
+}
+
+.mirror-div{
+    width:30%;
+    height:70%;
+    z-index:11;
+    margin-left:10px;
+}
+
+.mirror{
+    height:100%;
+    width:100%;
+    background-color:#ccc;
+    float:left;
+}
+
+.card-slot{
+    width:40%;
+    background-color:black;
+    margin-left:300px;
+    margin-top:-400px;
+    height:3.5%;
+}
+
+.options-screen{
+    width:100%;
+    background-color:#3354B0;
+    color:#fff;
+}
+
+.actions{
+    margin-top:20%;
+}
+
+.btn{
+    border:0;
+    border-radius:5px;
+    height:50px;
+    width: 80px;
+    font-size:1.8em;
+}
+
+.btn-primary{
+    background:linear-gradient(#DEDA6A,#BDB822);
+}
+
+form{
+    margin:0 auto;
+    width:50%;
+}
+
+a.option{
+    color:black!important;
+    text-decoration: none!important;
+}
+
+button{
+    color:black!important;
+}
+
+input[type="submit"]{
+    color:black;
+}
+
+.login-form{
+    margin:0 auto;
+    margin-top:25%;
+    width:50%;
+}
+
+.options{
+    float:left;
+}
+
+.options ul li{
+    text-decoration: none;
+    color:black;
+    background:linear-gradient(#75DB53,#45C21B);
+    padding:7px 14px;
+    list-style: none;
+    margin-top:5px;
+}
+.sumbit{
+    width:50%!important;
+    margin:0 auto;
+    padding:20px;
+    text-align:left;
+}
+
+input{
+    color:black!important;
+}
+
+input[type="radio"]{
+    display:block;
+}

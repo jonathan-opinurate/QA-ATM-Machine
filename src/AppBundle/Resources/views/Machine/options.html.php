@@ -22,6 +22,7 @@
                 'receipt' => 1
             ]) ?>"><li><i class="glyphicon glyphicon-play"></i> Cash With Receipt</li></a>
             <a class="option" href="<?= $view['router']->generate('show_balance') ?>"><li><i class="glyphicon glyphicon-play"></i> Display Balance</li></a>
+            <a class="option" href="<?= $view['router']->generate('deposit') ?>"><li><i class="glyphicon glyphicon-play"></i> Deposit Cash</li></a>
             </ul>
         </div>
     </div>

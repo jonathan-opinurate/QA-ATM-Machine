@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - symfony@fusion.dev.com" uuid="d69ef6bf-fe76-4559-9d8d-0e760b79091f">
+    <database-info product="MySQL" version="5.6.27" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="edp2"/>
+    <table name="LoginAttempts" schema="" catalog="edp2" type="TABLE">
+      <column name="IP" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Attempts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="LastLogin" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+    </table>
+    <table name="user_account" schema="" catalog="edp2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="account_number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pin_number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="balance" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="withdrawn" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

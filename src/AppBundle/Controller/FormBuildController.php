@@ -69,7 +69,7 @@ class FormBuildController extends Controller
                     return $this->render('AppBundle:Machine:error-amount.html.php');
                 }
 
-                $this->updateBalance($accountNumber, $newBalance);
+                $this->withdraw($accountNumber, $altAmount !== null ? $altAmount : $amount);
 
 
                 if ($showReceipt) {
@@ -87,11 +87,12 @@ class FormBuildController extends Controller
         ]);
     }
 
-    public function updateBalance($accountNumber, $newBalance)
+    public function withdraw($accountNumber, $amount)
     {
         $repo = $this->getDoctrine()->getRepository(AccountHolder::class);
         $account = $repo->findOneBy(['acc_no' => $accountNumber]);
-        $account->setBalance($newBalance);
+        $account->setBalance($account->getBalance() - $amount);
+        $account->setCashOut($account->getCashOut() + $amount);
 
         $em = $this->get('doctrine.orm.default_entity_manager');
         $em->flush();

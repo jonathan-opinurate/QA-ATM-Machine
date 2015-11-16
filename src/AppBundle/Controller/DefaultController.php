@@ -16,7 +16,7 @@ class DefaultController extends Controller
      */
     public function createAction()
     {
-        $account_holder = new AtmMachine();
+        $account_holder = new AccountHolder();
         $account_holder->setId(6);
         $account_holder->setName('Anna Lovegood');
         $account_holder->setAccNo('100008');

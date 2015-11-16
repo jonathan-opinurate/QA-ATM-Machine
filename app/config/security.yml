@@ -23,12 +23,13 @@ security:
             security: false
 
         login_firewall:
-                pattern:   ^/login$
+                pattern:   ^/(login|user\-error)$
                 anonymous: ~
         secured_area:
                 pattern:    ^/
-                form_login: ~
                 provider: symfony_db
                 logout:
                   path:   /logout
                   target: /
+                form_login:
+                  failure_handler: failed.login.attempts

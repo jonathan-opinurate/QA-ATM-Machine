@@ -10,3 +10,8 @@ login:
     defaults: { _controller: AppBundle:Atm:home}
 logout:
     path: /logout
+
+authentication-failure:
+    path: /authentication-failure
+    methods: GET
+    defaults: {__controller: AuthenticationFailureHandler:onAuthenticationFailure}

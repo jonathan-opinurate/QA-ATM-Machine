@@ -9,7 +9,7 @@
 namespace AppBundle\Controller;
 
 
-use AppBundle\Entity\AtmMachine;
+use AppBundle\Entity\AccountHolder;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class OptionController extends Controller
@@ -19,4 +19,6 @@ class OptionController extends Controller
     {
         return $this->render('AppBundle:Machine:options.html.php');
     }
+
+
 }
