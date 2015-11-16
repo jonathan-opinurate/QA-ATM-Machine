@@ -28,24 +28,40 @@ Withdraw Cash
 =============
 
 Withdrawing cash is easy, you have multiple options given as Radio Button options. You can select up in £10 increments until £50 where the amounts then go up in £50 increments.
-e.g. The page should look like this:
+You should also have the option to enter your own amount, but beware, your daily limit is £250.
 
-=======================================
 
----------------------------------
-|      WITHDRAW CASH            |
-|          £10                  |
-|          £20                  |
-|          £30                  |
-|          £40                  |
-|          £50                  |
-|         £100                  |
-|         £150                  |
-|         £200                  |
-|         £250                  |
-|                               |
-|  enter own amount   |======|  |
-|                 |submit|      |
----------------------------------
 
-============================================
+Cash With Receipt
+=================
+
+This option takes you to the withdrawal page, and once completed prints an on-screen receipt displaying the amount withdrawn.
+
+Deposit Cash
+==================
+
+This option allows you to put money back into your account.
+
+
+Logout
+===============
+To Logout, simply direct yourself back to the options page and you will find a logout button there. 
+Upon logging out your PHP session is ended and all changes are made to the database.
+
+=============================================================================================================
+
+#Every Bank has a Bank Manager, the Bank Of PHP is no exception.
+
+Bank Manager
+================
+The bank manager has a special Role set in the application account holder configuration.
+
+With the Account Number and PIN of the bank manager, you will be redirected to the options page but with one other option next to the logout button.
+
+This button will look like this |== Lock Machine ==|
+
+should you lock the machine with the bank manager's account number and pin code:
+AC/No: 999999
+PIN:   1234
+
+=====================================================================
