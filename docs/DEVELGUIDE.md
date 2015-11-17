@@ -171,6 +171,7 @@ in the Terminal run the command:
 `C:/path/to/atm_machine php app/console server:run`
 
 you should receive the same response as linux:
+
 `> Server running at 127.0.0.1:8000`
 
 or
