@@ -138,7 +138,7 @@ upon downloading or cloning this git repo, you should be able to find `paramater
 
 if it is not there, create a file under `app/config` called paramaters.yml that looks like this:
 
-`parameters:`
+    parameters:
 
     database_host: xxxxxx.xxx.xxx
     
