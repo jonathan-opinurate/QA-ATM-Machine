@@ -111,7 +111,7 @@ The bank manager has a special Role set in the application account holder config
 
 With the Account Number and PIN of the bank manager, you will be redirected to the options page but with one other option next to the logout button.
 
-This button will look like this |== Lock Machine ==|
+This button will look like this v
 
 should you lock the machine with the bank manager's account number and pin code:
 AC/No: 999999
