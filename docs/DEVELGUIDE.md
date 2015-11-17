@@ -140,25 +140,25 @@ if it is not there, create a file under `app/config` called paramaters.yml that 
 
     parameters:
 
-    database_host: xxxxxx.xxx.xxx
+        database_host: xxxxxx.xxx.xxx
     
-    database_port: null
+        database_port: null
    
-    database_name: xxx
+        database_name: xxx
     
-    database_user: xxx
+        database_user: xxx
     
-    database_password: xxxxxx
+        database_password: xxxxxx
     
-    mailer_transport: smtp
+        mailer_transport: smtp
     
-    mailer_host: 127.0.0.1
+        mailer_host: 127.0.0.1
     
-    mailer_user: null
+        mailer_user: null
     
-    mailer_password: null
+        mailer_password: null
     
-    secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     
 
 So That's it for linux!
