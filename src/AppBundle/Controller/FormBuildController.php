@@ -61,11 +61,20 @@ class FormBuildController extends Controller
                 $balance = $user->getBalance();
                 $limit = 250;
 
-                if ($altAmount !== null && $altAmount < $limit){
+                if ($altAmount !== null && $altAmount < $limit + 1 && $altAmount %10 == 0){
                     $newBalance = $balance - $altAmount;
-                }elseif ($amount >0 && $amount < ($limit + 1 )){
+                }elseif ($amount >0 && $amount < ($limit + 1 )) {
                     $newBalance = $balance - $amount;
-                }else{
+                }else
+                {
+                    return $this->render('AppBundle:Machine:error-amount.html.php');
+                }
+
+                if ($amount > $balance || $altAmount > $balance) {
+                    return $this->render('AppBundle:Machine:error-amount.html.php');
+                }
+
+                if ($altAmount < 0){
                     return $this->render('AppBundle:Machine:error-amount.html.php');
                 }
 

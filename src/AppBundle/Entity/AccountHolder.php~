@@ -12,6 +12,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\Mapping\Entity;
 
 /**
  * @ORM\Entity
@@ -19,9 +20,14 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class AccountHolder implements UserInterface, \Serializable
 {
+    /**
+     * @ORM\Column(type="integer", name="id")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
 
     /**
-     * @ORM\Id
      * @ORM\Column(type="string", length=50, name="name")
      */
     protected $name;
@@ -54,6 +60,26 @@ class AccountHolder implements UserInterface, \Serializable
     protected $newBalance;
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set id
+     * @return AccountHolder
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * Set name
      *
      * @param string $name
@@ -75,30 +101,6 @@ class AccountHolder implements UserInterface, \Serializable
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $surname
-     *
-     * @return AccountHolder
-     */
-    public function setSurame($surname)
-    {
-        $this->surname= $surname;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getSurame()
-    {
-        return $this->surname;
     }
 
     /**
@@ -209,7 +211,7 @@ class AccountHolder implements UserInterface, \Serializable
            $this->acc_no,
             $this->pin_no,
             $this->name,
-            $this->surname,
+            $this->id,
             $this->balance,
             $this->cashOut
         ]);
@@ -305,29 +307,5 @@ class AccountHolder implements UserInterface, \Serializable
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
-    }
-
-    /**
-     * Set surname
-     *
-     * @param string $surname
-     *
-     * @return AccountHolder
-     */
-    public function setSurname($surname)
-    {
-        $this->surname = $surname;
-
-        return $this;
-    }
-
-    /**
-     * Get surname
-     *
-     * @return string
-     */
-    public function getSurname()
-    {
-        return $this->surname;
     }
 }
