@@ -16,4 +16,5 @@ $view->extend('::layout.html.php');
 </div>
 <div class="sumbit">
     <a href="<?php echo $view['router']->generate('options') ?>"><button>Back</button></a>
+    <a href="<?= $view['router']->generate('logout') ?>"><input type="button" value="Return Card"></a>
 </div>

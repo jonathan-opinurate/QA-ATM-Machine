@@ -12,3 +12,4 @@ $this->extend('::layout.html.php');
 <h1>Error!</h1>
 <h2>You cannot withdraw an amount of 0 or an amount which exceeds your daily limit.</h2>
 <a href="<?= $view['router']->generate('options') ?>"><input type="button" value="Back"></a>
+<a href="<?= $view['router']->generate('logout') ?>"><input type="button" value="Return Card"></a>

@@ -2,7 +2,7 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host:     XXX.XX.X.XX
+    database_host:     fusion
     database_port:     ~
     database_name:     xxxxxxxxxxxxx
     database_user:     xxxxxxxxxxxxx

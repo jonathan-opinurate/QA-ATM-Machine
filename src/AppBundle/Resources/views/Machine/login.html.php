@@ -12,6 +12,8 @@ if ($error): ?>
 <?php endif ?>
 <h1>Bank of PHP</h1>
 
+    <h2>Welcome!</h2>
+
 <form action="<?php echo $view['router']->generate('login_check') ?>" method="post" class="login-form">
     <label for="username">Account Number:</label><br/>
     <input type="text" id="username" name="_username" value="<?php echo $last_username ?>" /><br /><br />
