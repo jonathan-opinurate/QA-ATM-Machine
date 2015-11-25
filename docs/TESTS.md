@@ -1,10 +1,10 @@
 
 # TESTS for EDP2
 
+![Login Page](http://benavdesign.co.uk/wp-content/themes/Jonathan/test-table.jpg "Login Page")
+
 Login Failure Attempts Test
 ============================
-The first Attempt and second attempt
-![Login Page](http://benavdesign.co.uk/wp-content/themes/Jonathan/test-table.jpg "Login Page")
 
 
 ## Test Passed.
@@ -32,4 +32,3 @@ Balance Updated when Deposit Made
 =================================
 
 ## Test Passed
-
