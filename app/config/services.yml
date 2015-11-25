@@ -11,3 +11,17 @@ services:
     failed.login.attempts:
       class: 'AppBundle\EventListeners\AuthenticationFailureHandler'
       arguments: ['@kernel', '@security.http_utils', '@session']
+
+    machine.status.service:
+      class: 'AppBundle\Services\MachineStatusService'
+      arguments: [%kernel.root_dir%/../machine-status]
+
+    machine.status.listener:
+      class: 'AppBundle\EventListeners\CheckMachineStatusListener'
+      arguments:
+        - @machine.status.service
+        - @security.authorization_checker
+        - @security.token_storage
+        - @templating
+      tags:
+        - {name: kernel.event_listener, event: kernel.response}

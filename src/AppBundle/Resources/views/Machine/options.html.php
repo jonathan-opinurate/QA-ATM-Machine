@@ -28,6 +28,7 @@
     </div>
     <div class="sumbit">
         <?php if ($view['security']->isGranted('ROLE_MANAGER')){ echo '<a href="'.$view['router']->generate('closed').'"> <input type="button" value="Close Machine">'; }?>
+        <?php if ($view['security']->isGranted('ROLE_MANAGER')){ echo '<a href="'.$view['router']->generate('open').'"> <input type="button" value="Open Machine">'; }?>
         <a href="<?= $view['router']->generate('logout') ?>"><input type="button" value="Return Card"></a>
     </div>
 </div>

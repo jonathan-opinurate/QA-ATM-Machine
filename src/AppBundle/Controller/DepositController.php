@@ -39,11 +39,10 @@ class DepositController extends Controller
                 $user = $this->getUser();
                 $accountNumber = $user->getAccNo();
                 $balance = $user->getBalance();
-                $limit = 250;
 
-                if ($amount > 0){
+                if ($amount > 0) {
                     $newBalance = $balance + $amount;
-                }else{
+                } else {
                     return $this->render('AppBundle:Machine:error-amount.html.php');
                 }
 
@@ -54,7 +53,6 @@ class DepositController extends Controller
         return $this->render('AppBundle:Machine:deposit-cash.html.php', [
             'form' => $form->createView()
         ]);
-
 
 
     }

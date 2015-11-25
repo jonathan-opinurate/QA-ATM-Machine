@@ -28,7 +28,7 @@ class DefaultController extends Controller
         $em->persist($account_holder);
         $em->flush();
 
-        return new Response('Created account holder '.$account_holder->getName());
+        return new Response('Created account holder ' . $account_holder->getName());
     }
 
     public function withdrawalAction()
