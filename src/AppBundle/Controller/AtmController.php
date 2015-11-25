@@ -8,20 +8,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\AccountHolder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
 class AtmController extends Controller
 {
     /**
      * @return Response
      * @Route("/", name="options")
      */
-    public function homeAction(){
-        return $this->render('AppBundle:Machine:options.html.php');
-    }
-
-    public function loginPageAction()
+    public function homeAction()
     {
-        if (!isset ($acc_no)){
-           return new Response( $this->render('AppBundle:Machine:login.html.php'));
-        }
+        return $this->render('AppBundle:Machine:options.html.php');
     }
 }

@@ -7,6 +7,7 @@
  */
 
 namespace AppBundle\Controller;
+
 use AppBundle\Entity\AccountHolder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -21,14 +22,22 @@ class ManagerController extends Controller
     public function managerAction()
     {
         /** @var AccountHolder $user */
-        $user = $this->getUser();
 
-        $accountNumber = $user->getAccNo();
-        $pinNumber = $user->getPinNo();
-        if($accountNumber === 999999 && $pinNumber === 1234){
-            return $this->render('AppBundle:Machine:closed.html.php');
-        }else{
-            return $this->render('AppBundle:Machine:closed.html.php');
-        }
+        $machineStatus = $this->get('machine.status.service');
+        $machineStatus->close();
+
+        return $this->render('AppBundle:Machine:closed.html.php');
+
+    }
+
+    /**
+     * @Route("/open", name="open")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function openMachineAction(){
+        $machineStatus = $this->get('machine.status.service');
+        $machineStatus->open();
+
+        return $this->redirectToRoute('login');
     }
 }

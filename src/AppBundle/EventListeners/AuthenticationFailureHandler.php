@@ -17,6 +17,7 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Http\HttpUtils;
+
 class AuthenticationFailureHandler extends DefaultAuthenticationFailureHandler
 {
 
@@ -30,21 +31,18 @@ class AuthenticationFailureHandler extends DefaultAuthenticationFailureHandler
         parent::__construct($httpKernel, $httpUtils);
 
     }
+
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
         $session = $this->session;
-
         $attempts = $session->get('attempts', 0);
-
         $attempts++;
-
         $session->set('attempts', $attempts);
 
-
-        if ($attempts <= 2){
+        if ($attempts <= 2) {
             $response = new RedirectResponse('/login');
             return $response;
-        }else{
+        } else {
             $response = new RedirectResponse('/user-error');
             return $response;
         }

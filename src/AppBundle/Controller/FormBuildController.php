@@ -10,6 +10,7 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Entity\AccountHolder;
+use AppBundle\Form\WithdrawalFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,30 +22,7 @@ class FormBuildController extends Controller
      */
     public function withdrawalFormAction(Request $request, $receipt)
     {
-        $form = $this->createFormBuilder()
-            ->add('amount', 'choice', [
-                'expanded' => true,
-                'multiple' => false,
-                'choices' => [
-                    10 => "£10",
-                    20 => "£20",
-                    30 => "£30",
-                    40 => "£40",
-                    50 => "£50",
-                    100 => "£100",
-                    150 => "£150",
-                    250 => "£250",
-                    null => 'Input own amount',
-                ]
-            ])
-            ->add('receipt', 'hidden', [
-                'data' => $receipt
-            ])
-            ->add('altAmount', 'text', [
-                'required' => false
-            ])
-            ->add('withdraw', 'submit', array('label' => 'Withdraw'))
-            ->getForm();
+        $form = $this->createForm(new WithdrawalFormType($receipt));
 
         if ($request->getMethod() === 'POST') {
             $form->handleRequest($request);
@@ -59,27 +37,18 @@ class FormBuildController extends Controller
                 $user = $this->getUser();
                 $accountNumber = $user->getAccNo();
                 $balance = $user->getBalance();
-                $limit = 250;
+                $remainingLimit = 250 - $user->getCashOut();
 
-                if ($altAmount !== null && $altAmount < $limit + 1 && $altAmount %10 == 0){
-                    $newBalance = $balance - $altAmount;
-                }elseif ($amount >0 && $amount < ($limit + 1 )) {
-                    $newBalance = $balance - $amount;
-                }else
-                {
+                $withdrawalAmount = $altAmount === null ? $amount : $altAmount;
+                if ($withdrawalAmount <= 0 || $withdrawalAmount > $remainingLimit || ($withdrawalAmount % 10) !== 0) {
                     return $this->render('AppBundle:Machine:error-amount.html.php');
                 }
 
-                if ($amount > $balance || $altAmount > $balance) {
-                    return $this->render('AppBundle:Machine:error-amount.html.php');
-                }
-
-                if ($altAmount < 0){
+                if ($balance < $withdrawalAmount) {
                     return $this->render('AppBundle:Machine:error-amount.html.php');
                 }
 
                 $this->withdraw($accountNumber, $altAmount !== null ? $altAmount : $amount);
-
 
                 if ($showReceipt) {
                     return $this->redirectToRoute('receipt', [

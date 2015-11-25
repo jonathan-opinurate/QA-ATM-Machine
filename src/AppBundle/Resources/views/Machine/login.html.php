@@ -16,10 +16,10 @@ if ($error): ?>
 
 <form action="<?php echo $view['router']->generate('login_check') ?>" method="post" class="login-form">
     <label for="username">Account Number:</label><br/>
-    <input type="text" id="username" name="_username" value="<?php echo $last_username ?>" /><br /><br />
+    <input type="text" id="username" name="_username" maxlength="6" value="<?php echo $last_username ?>" /><br /><br />
 
     <label for="password">Pin:</label><br/>
-    <input type="password" id="password" name="_password" /><br /><br />
+    <input type="password" id="password" maxlength="4" name="_password" /><br /><br />
 
     <!--
         If you want to control the URL the user

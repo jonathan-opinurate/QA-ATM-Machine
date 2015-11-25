@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\AccountHolder;
+
 class SecurityController extends Controller
 {
     /**
@@ -22,18 +23,16 @@ class SecurityController extends Controller
         $lastUsername = $authenticationUtils->getLastUsername();
 
 
-            return $this->render(
-                'AppBundle:Machine:login.html.php',
-                array(
-                    // last username entered by the user
-                    'last_username' => $lastUsername,
-                    'error' => $error,
-                )
-            );
+        return $this->render(
+            'AppBundle:Machine:login.html.php',
+            array(
+                // last username entered by the user
+                'last_username' => $lastUsername,
+                'error' => $error,
+            )
+        );
 
     }
-
-
 
 
     /**
