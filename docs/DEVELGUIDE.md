@@ -9,7 +9,9 @@ Requirements
 * Symfony 2
 * Internet Connectivity (To connect to SQL Database)
 * User Login Details
-* Intellij IDEA
+
+
+Not requirted but I'd advise running the software from Intellij IDEA terminal
 
 --------------------------------------------------------------------------------------------------------------------
 
